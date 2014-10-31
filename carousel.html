@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>arousel</title>
+        <style type="text/css">
+            img {
+                border: none;
+            }
+            .carousel{
+                margin-right: auto;
+                margin-left: auto;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="carousel">
+            <img src="img/pic1.jpg" id="Pic1">
+            <img src="img/pic2.jpg" id="Pic2">
+            <img src="img/pic3.jpg" id="Pic3">
+            <img src="img/pic4.jpg" id="Pic4">
+            <img src="img/pic5.jpg" id="Pic5">
+            <img src="img/pic6.jpg" id="Pic6">
+        </div>
+        <script src="http://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+        <script src="carousel.js"></script>
+        <script type="text/javascript">
+            $(function() {
+                $('.carousel').Carousel({
+                    width: 1000,
+                    height: 600,
+                    radiusX: 600,
+                    radiusY: 70,
+                    minScale: 0.3,
+                    rotRate: 8000
+                });
+
+                $('#Pic2').bind('click', function() {
+                    //
+                    alert('Pic2 clicked');
+                });
+            })
+        </script>
+    </body>
+</html>
